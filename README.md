@@ -23,7 +23,9 @@ O sistema processa milhões de acessos a URLs a partir de logs, atualizando uma 
 ├── manifest.txt                # URLs únicas da CDN
 ├── log_distribuido.txt         # Log com acessos uniformes (baixa contenção)
 ├── log_concorrente.txt         # Log com acessos concentrados (alta contenção)
-
+├── gabarito_distribuido.csv    # Resultados esperados (baixa contenção)
+├── gabarito_concorrente.csv    # Resultados esperados (alta contenção)
+└── relatorio.pdf               # Relatório final (entrega acadêmica)
 ```
 
 ---
@@ -84,6 +86,20 @@ OMP_NUM_THREADS=8 ./par_atomic manifest.txt log_concorrente.txt results_concorre
 
 ---
 
+## ⏱️ Medidas de Desempenho
+
+Use o comando `time` para medir o tempo de execução de cada versão:
+
+```bash
+/usr/bin/time -f "%E" ./par_atomic manifest.txt log_distribuido.txt results.csv
+```
+
+Calcule:
+
+* **Speedup:** `tempo_seq / tempo_paralelo`
+* **Eficiência:** `speedup / número_de_threads`
+
+---
 
 ## 🧠 Conceitos Envolvidos
 
