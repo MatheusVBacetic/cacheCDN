@@ -106,7 +106,7 @@ O projeto demonstra, na prática, o impacto da **contenção de locks** em siste
 ## 👨‍💻 Autores
 
 * **Matheus Veiga Bacetic Joaquim**
-* **Jõao Vitor Rocha Miranda**
+* **João Vitor Rocha Miranda**
 
 ---
 
